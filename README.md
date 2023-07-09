@@ -19,6 +19,11 @@ calculate the offset from the base of ntoskrnl in usermode
 add the same offset to the base of ntoskrnl.exe in kernelmode.  
 once we have the address of SeCiCallbacks in kernel, all we need to do is to add a static offset to CiValidateImageHeader's entry in the array.  
 leverage the write primitive to replace the address of CiValidateImageHeader with the address of ZwFlushInstructionCache(or any function that will always return NTSTATUS SUCCESS with the same prototype of CiValidateImageHeader. )  
-Built on top of the core of gdrv-loader  
 ***************************
 # Demo
+
+
+
+# Notes
+whilst the implemented technique does not require a read primitive , we do use the read primitive to restore the original CiValidateImageHeader after the unsigned driver is loaded.   
+you can modify the code to not use the read primitive and it will work just fine since  SeCiCallbacks is not PatchGuard protected 
