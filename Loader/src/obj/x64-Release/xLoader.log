@@ -1,0 +1,22 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (obj\x64-Release\) contains files shared from another project (gdrvloader.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  load.cpp
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: #define FLS_MAXIMUM_AVAILABLE 128
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : see previous definition of 'FLS_MAXIMUM_AVAILABLE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : #define FLS_MAXIMUM_AVAILABLE 4080
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(93,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(93,20): warning C4018: 	for (int i = 0; i < modules->NumberOfModules; i++)
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(93,20): warning C4018: 	                  ^
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(151,31): warning C4244: 'initializing': conversion from 'DWORD64' to 'DWORD', possible loss of data
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(151,31): warning C4244: 	DWORD seCiCallbacksLeaOffset = *(DWORD64*)(seCiCallbacksInstr + 3);
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(151,31): warning C4244: 	                             ^
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(469,5): warning C4102: 'Exit': unreferenced label
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(469,5): warning C4102: Exit:
+C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\load.cpp(469,5): warning C4102:     ^
+  Generating code
+  0 of 22 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  gdrv-loader.vcxproj -> C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\bin\Loader.exe
