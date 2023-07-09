@@ -21,9 +21,9 @@ once we have the address of SeCiCallbacks in kernel, all we need to do is to add
 leverage the write primitive to replace the address of CiValidateImageHeader with the address of ZwFlushInstructionCache, or any function that will always return NTSTATUS SUCCESS with the same prototype of CiValidateImageHeader. 
 ***************************
 # Demo
+![251973627-171334ef-28b7-42c9-8f59-daa647c9603d](https://github.com/0mWindyBug/KDP-Compatible-Unsigned-Driver-Loader/assets/139051196/a591d9ba-d028-4591-8440-c67d9d7818da)
 
-
-
+  
 # Notes
 whilst the implemented technique does not require a read primitive , we do use the read primitive to restore the original CiValidateImageHeader after the unsigned driver is loaded.   
 you can modify the code to not use the read primitive and it will work just fine since  SeCiCallbacks is not PatchGuard protected  
