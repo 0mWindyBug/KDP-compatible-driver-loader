@@ -1,4 +1,4 @@
-# KDP-Compatible-Unsigned-Driver-Loader 
+# KDP Compatible Unsigned Driver Loader 
 Kernel Unsigned Driver Loader ,  KDP compatible,  Leveraging gdrv.sys's Write Primitive 
 
 Tested on Windows 10 21H2 and 22H2
