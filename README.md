@@ -26,4 +26,5 @@ leverage the write primitive to replace the address of CiValidateImageHeader wit
 
 # Notes
 whilst the implemented technique does not require a read primitive , we do use the read primitive to restore the original CiValidateImageHeader after the unsigned driver is loaded.   
-you can modify the code to not use the read primitive and it will work just fine since  SeCiCallbacks is not PatchGuard protected 
+you can modify the code to not use the read primitive and it will work just fine since  SeCiCallbacks is not PatchGuard protected  
+built on top of the core  of gdrv-loader 
