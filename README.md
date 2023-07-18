@@ -25,8 +25,8 @@ leverage the write primitive to replace the address of CiValidateImageHeader wit
 
   
 # Notes
-- in case you cant load gdrv due to msft driver blacklist just modify the code to use an alternative vulnerable driver . there are more than enough .  
-whilst the implemented technique does not require a read primitive , we do use the read primitive to restore the original CiValidateImageHeader after the unsigned driver is loaded.   
+- in case loading gdrv.sys fails, its likely due to Microsoft's driver blocklist. just modify the code tk use an alternative driver , there are plenty of them.     
+- whilst the implemented technique does not require a read primitive , we do use the read primitive to restore the original CiValidateImageHeader after the unsigned driver is loaded.   
 you can modify the code to not use the read primitive and it will work just fine since  SeCiCallbacks is not PatchGuard protected
 
-built on top of the core  of gdrv-loader 
+- built on top of the core  of gdrv-loader 
