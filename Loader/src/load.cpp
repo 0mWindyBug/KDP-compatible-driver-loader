@@ -540,8 +540,7 @@ WindUnloadDriver(
 	FileNameToServiceName(DriverServiceName, DriverName);
 
 	Status = UnloadDriver(DriverServiceName);
-	if (NT_SUCCESS(Status) || Hidden)
-		DeleteService(DriverServiceName);
+
 
 	RtlAdjustPrivilege(SE_LOAD_DRIVER_PRIVILEGE,
 						SeLoadDriverWasEnabled,
