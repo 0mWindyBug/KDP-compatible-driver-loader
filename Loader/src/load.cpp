@@ -2,6 +2,8 @@
 #include "hde/hde64.h"
 #include <shlwapi.h>
 #include <devioctl.h>
+#include <Psapi.h>
+
 
 #define EQUALS(a, b)				(RtlCompareMemory(a, b, sizeof(b) - 1) == (sizeof(b) - 1))
 #define NT_MACHINE					L"\\Registry\\Machine\\"
@@ -118,12 +120,16 @@ seCiCallbacks_swap getCiValidateImageHeaderEntry()
 	DWORD64 uNtAddr = (DWORD64)uNt;
 	void* ntoskrnl_ptr = (void*)uNt;
 
+	//Calculating the size of the loaded module
+	MODULEINFO modinfo;
+	GetModuleInformation(GetCurrentProcess(), uNt, &modinfo, sizeof(modinfo));
+
 	// pattern sigscan for lea r8, [nt!SeCiCallbacks]
 	unsigned char pattern[] = { 0xff, 0x48, 0x8b, 0xd3, 0x4c, 0x8d, 0x05 };
 
 	// pattern scanning 
 	DWORD64 seCiCallbacksInstr = 0x0;
-	for (unsigned int i = 0; i < 0x1000000; i++)
+	for (unsigned int i = 0; i < modinfo.SizeOfImage; i++)
 	{
 
 		for (int j = 0; j < sizeof(pattern); j++)
