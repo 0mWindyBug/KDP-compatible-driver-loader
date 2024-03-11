@@ -2,8 +2,9 @@
   hde64.c
   main.cpp
   pe.cpp
-Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
   load.cpp
+  sys.cpp
+C:\Repos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
   #define FLS_MAXIMUM_AVAILABLE 128
   ^ (compiling source file 'main.cpp')
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270,1):
@@ -11,7 +12,7 @@ Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.
   #define FLS_MAXIMUM_AVAILABLE 4080  
   ^
   
-Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
+C:\Repos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
   #define FLS_MAXIMUM_AVAILABLE 128
   ^ (compiling source file 'pe.cpp')
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270,1):
@@ -19,7 +20,7 @@ Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.
   #define FLS_MAXIMUM_AVAILABLE 4080  
   ^
   
-Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
+C:\Repos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
   #define FLS_MAXIMUM_AVAILABLE 128
   ^ (compiling source file 'load.cpp')
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270,1):
@@ -27,19 +28,15 @@ Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.
   #define FLS_MAXIMUM_AVAILABLE 4080  
   ^
   
-Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\load.cpp(93,20): warning C4018: '<': signed/unsigned mismatch
+C:\Repos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\load.cpp(95,20): warning C4018: '<': signed/unsigned mismatch
   	for (int i = 0; i < modules->NumberOfModules; i++)
   	                  ^
   
-Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\load.cpp(151,31): warning C4244: 'initializing': conversion from 'DWORD64' to 'DWORD', possible loss of data
-  	DWORD seCiCallbacksLeaOffset = *(DWORD64*)(seCiCallbacksInstr + 3);
-  	                             ^
-  
-Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\load.cpp(469,1): warning C4102: 'Exit': unreferenced label
+C:\Repos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\load.cpp(476,1): warning C4102: 'Exit': unreferenced label
   Exit:
   ^
   
-Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
+C:\Repos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
   #define FLS_MAXIMUM_AVAILABLE 128
   ^ (compiling source file 'sys.cpp')
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270,1):
@@ -47,6 +44,5 @@ Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.
   #define FLS_MAXIMUM_AVAILABLE 4080  
   ^
   
-  sys.cpp
   Generating Code...
-  gdrv-loader.vcxproj -> Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\Compiled\swind2.exe
+  gdrv-loader.vcxproj -> C:\Repos\KDP-fixed\KDP-compatible-driver-loader\Loader\Compiled\swind2.exe
