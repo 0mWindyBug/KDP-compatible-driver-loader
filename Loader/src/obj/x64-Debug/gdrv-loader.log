@@ -1,27 +1,52 @@
-﻿  hde64.c
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (obj\x64-Debug\) contains files shared from another project (gdrvloader.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  hde64.c
   main.cpp
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: #define FLS_MAXIMUM_AVAILABLE 128
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : see previous definition of 'FLS_MAXIMUM_AVAILABLE'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : #define FLS_MAXIMUM_AVAILABLE 4080
   pe.cpp
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: #define FLS_MAXIMUM_AVAILABLE 128
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : see previous definition of 'FLS_MAXIMUM_AVAILABLE'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : #define FLS_MAXIMUM_AVAILABLE 4080
-  swind2.cpp
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: #define FLS_MAXIMUM_AVAILABLE 128
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : see previous definition of 'FLS_MAXIMUM_AVAILABLE'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : #define FLS_MAXIMUM_AVAILABLE 4080
-  sysinfo.cpp
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: #define FLS_MAXIMUM_AVAILABLE 128
-C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\src\ntdll.h(2794,1): warning C4005: ^
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : see previous definition of 'FLS_MAXIMUM_AVAILABLE'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270): message : #define FLS_MAXIMUM_AVAILABLE 4080
+Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
+  load.cpp
+  #define FLS_MAXIMUM_AVAILABLE 128
+  ^ (compiling source file 'main.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270,1):
+  see previous definition of 'FLS_MAXIMUM_AVAILABLE'
+  #define FLS_MAXIMUM_AVAILABLE 4080  
+  ^
+  
+Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
+  #define FLS_MAXIMUM_AVAILABLE 128
+  ^ (compiling source file 'pe.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270,1):
+  see previous definition of 'FLS_MAXIMUM_AVAILABLE'
+  #define FLS_MAXIMUM_AVAILABLE 4080  
+  ^
+  
+Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
+  #define FLS_MAXIMUM_AVAILABLE 128
+  ^ (compiling source file 'load.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270,1):
+  see previous definition of 'FLS_MAXIMUM_AVAILABLE'
+  #define FLS_MAXIMUM_AVAILABLE 4080  
+  ^
+  
+Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\load.cpp(93,20): warning C4018: '<': signed/unsigned mismatch
+  	for (int i = 0; i < modules->NumberOfModules; i++)
+  	                  ^
+  
+Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\load.cpp(151,31): warning C4244: 'initializing': conversion from 'DWORD64' to 'DWORD', possible loss of data
+  	DWORD seCiCallbacksLeaOffset = *(DWORD64*)(seCiCallbacksInstr + 3);
+  	                             ^
+  
+Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\load.cpp(469,1): warning C4102: 'Exit': unreferenced label
+  Exit:
+  ^
+  
+Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\src\ntdll.h(2794,1): warning C4005: 'FLS_MAXIMUM_AVAILABLE': macro redefinition
+  #define FLS_MAXIMUM_AVAILABLE 128
+  ^ (compiling source file 'sys.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winnt.h(12270,1):
+  see previous definition of 'FLS_MAXIMUM_AVAILABLE'
+  #define FLS_MAXIMUM_AVAILABLE 4080  
+  ^
+  
+  sys.cpp
   Generating Code...
-  gdrv-loader.vcxproj -> C:\Users\dorge\Downloads\gdrv-loader-master (1)\gdrv-loader-master\bin\swind2.exe
+  gdrv-loader.vcxproj -> Z:\09_VM_Share\GitRepos\KDP-fixed\KDP-compatible-driver-loader\Loader\Compiled\swind2.exe
