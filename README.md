@@ -28,6 +28,6 @@ leverage the write primitive to replace the address of CiValidateImageHeader wit
 - in case loading gdrv.sys fails, its likely due to Microsoft's driver blocklist/cert expired,  just modify the code to use an alternative vulnerable driver , there are plenty of them.
 - you can also disable the driver blocklist via the following command :  reg add HKLM\SYSTEM\CurrentControlSet\Control\CI\Config /v "VulnerableDriverBlocklistEnable" /t REG_DWORD /d 0 /f      
 - whilst the implemented technique does not require a read primitive , we do use the read primitive to restore the original CiValidateImageHeader after the unsigned driver is loaded.   
-you can modify the code to not use the read primitive and it will work just fine since  SeCiCallbacks is not PatchGuard protected (as of now...) 
+you can modify the code to not use the read primitive and it will work just fine since  SeCiCallbacks is not PatchGuard protected (EDIT : protected in Windows 11 23H2)
 
 - built on top of the core  of gdrv-loader 
