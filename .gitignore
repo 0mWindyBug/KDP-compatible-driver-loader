@@ -2,3 +2,8 @@
 /Loader/.vs
 /Loader/Compiled
 /Loader/src/obj
+Loader/src/obj/x64-Debug/main.obj
+Loader/src/obj/x64-Debug/main.obj
+Loader/src/obj/x64-Debug/pe.obj
+Loader/src/obj/x64-Debug/vc143.pdb
+Loader/src/resource.aps
