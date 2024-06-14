@@ -440,10 +440,6 @@ TriggerExploit(
 		return Status;
 	}
 
-	// The device should exist now. If we still can't open it, bail
-	Status = OpenDeviceHandle(&DeviceHandle, TRUE);
-	if (!NT_SUCCESS(Status))
-		return Status;
 	Printf(L"[*] Successfully Loaded unsigned driver!\n");
 		 
 
